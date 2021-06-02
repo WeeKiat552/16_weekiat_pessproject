@@ -33,6 +33,35 @@ $conn->close();
 <link href="header_style.css" rel="stylesheet" type="text/css">
 <link href="content_style.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
+function validateForm()
+{
+	var x=document.forms["frmLogCall"]["callerName"].value;
+	var y=document.forms["frmLogCall"]["contactNo"].value;
+	var n=document.forms["frmLogCall"]["location"].value;
+	var m=document.forms["frmLogCall"]["incidentDesc"].value;
+	if (x==null || x=="")
+	{
+		alert("Caller Name is required.");
+		return false;
+	}
+	// may add code for validating other inputs
+	else if (y==null || y=="")
+	{
+		alert("Contact No is required.");
+		return false;
+	}
+	// may add code for validating other inputs
+	else if (n==null || n=="")
+	{
+		alert("location is required.");
+		return false;
+	}
+	else if (m==null || m=="")
+	{
+		alert("Description is required.");
+		return false;
+	}
+}
 
 </script>
 </head>
@@ -86,4 +115,5 @@ $conn->close();
 </form>
 </body>
 </html>
+	
 	

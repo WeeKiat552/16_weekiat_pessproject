@@ -52,7 +52,6 @@ if (isset($_POST["btnDispatch"])){
   }
 	$conn->close();
 
-	
 ?>
 	<!-- After dispatching, redirect to logcall.php -->
 	<script type="text/javascript">window.location="./logcall.php";</script>
@@ -139,8 +138,8 @@ $conn->close();
 		<td colspan="3">Dispatch Patrolcar Panel</td>
 	</tr>
 	<?php
-		foreach($patrolCarArray as $key => $value) {
-			?> 
+		foreach($patrolcarArray as $key=>$value) {
+	?>
 	<tr>
 		<td><input type="checkbox" name="chkPatrolcar[]"
 			value="<?php echo $key?>"></td>
@@ -151,7 +150,8 @@ $conn->close();
 	}    
 	?>
 	<tr>
-		<td><input type="reset" name="btnCancel" id="btnCancel" value="Reset"></td>
+	
+		<td input type="reset" STYLE="color: #dd5e89; font-size: 14px; background-color: #FFFFFF;" name="btnCancel" id="btnCancel" value="Reset"><input type="reset" name="btnCancel" id="btnCancel" value="Reset"></td>
 		<td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" 
 	name="btnDispatch" id="btnDispatch" value="Dispatch">
 		</td>
